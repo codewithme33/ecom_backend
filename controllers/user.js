@@ -12,7 +12,7 @@ module.exports.registerUser = (req, res) => {
         return res.status(400).send({ message: 'Email invalid' });
     }
     // Checks if the mobile number has the correct number of characters
-    else if (req.body.mobileNo.length !== 11){
+    else if (req.body.mobileNo.length !== 10){
         return res.status(400).send({ message: 'Mobile number invalid'});
     }
     // Checks if the password has atleast 8 characters
